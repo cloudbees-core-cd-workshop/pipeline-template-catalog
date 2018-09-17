@@ -1,0 +1,20 @@
+displayName: Node.js App GitHub Org Folder
+type: ORGANIZATION_FOLDER
+description: Test, Build and Deploy for Standard Node.js Applications using a .nodejs-app as the marker file.
+parameters:
+  - name: repoOwner
+    type: string
+    displayName: Repository Owner
+  - name: githubCredentialId
+    displayName: GitHub Credential ID
+    type: CREDENTIALS
+  - name: npmPackages
+    type: string
+    displayName: Default NPM Packages
+    defaultValue: express pug
+organizationFolder:
+  navigator:
+    github:
+      repoOwner: ${repoOwner}
+      credentialsId: ${githubCredentialId}
+  markerFile: .nodejs-app
