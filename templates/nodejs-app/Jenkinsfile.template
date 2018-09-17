@@ -23,7 +23,7 @@ pipeline {
         stage('App Setup') {
           steps {
             checkout scm
-            defineProps(env.MARKER_FILE, [npmPackages: ${npmPackages}])
+            defineProps(env.MARKER_FILE, [npmPackages: "${npmPackages}"])
             container('nodejs') {
               sh """
                 npm i -S ${npmPackages}
