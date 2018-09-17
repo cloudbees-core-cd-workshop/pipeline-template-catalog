@@ -6,10 +6,6 @@ parameters:
     type: string
     displayName: Repository Owner
     defaultValue: cloudbees-cd-acceleration-workshop
-  - name: githubCredentialId
-    displayName: GitHub Credential ID
-    type: CREDENTIALS
-    defaultValue: cd-accel-github-token
   - name: npmPackages
     type: string
     displayName: Default NPM Packages
@@ -18,5 +14,5 @@ organizationFolder:
   navigator:
     github:
       repoOwner: ${repoOwner}
-      credentialsId: ${githubCredentialId}
+      credentialsId: cd-accel-github-token
   markerFile: .nodejs-app
